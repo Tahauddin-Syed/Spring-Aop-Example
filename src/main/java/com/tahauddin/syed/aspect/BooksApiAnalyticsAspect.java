@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 @Slf4j
-@Order(1)
-public class BooksLoggingAspect {
+@Order(2)
+public class BooksApiAnalyticsAspect {
 
     @Before("execution(com.tahauddin.syed.domain.entity.BooksEntity saveBook(com.tahauddin.syed.domain.entity.BooksEntity))")
     public void beforeAddBooksEntity() {
-      log.info("In Books Logging Aspect --  Before Adding Books");
+      log.info("In Books Api Analytics Aspect -- Before Adding Books");
     }
 
 
